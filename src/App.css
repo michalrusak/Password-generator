@@ -1,3 +1,62 @@
 .App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 700px;
+  height: 500px;
+  padding-bottom: 10px;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  box-shadow: #888 1px 1px 1px 1px;
+}
+.title {
+  text-transform: uppercase;
+  font-size: 24px;
+  border-bottom: 1px solid #555;
+  width: 640px;
+  margin: 10px 20px;
+  padding: 10px;
+  box-sizing: content-box;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+label {
+  text-transform: uppercase;
+}
+input {
+  margin-left: 10px;
+}
+.submitButton {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #555;
+}
+.password {
   text-align: center;
+  font-size: 20px;
+  width: 90%;
+  padding: 20px;
+  overflow-x: auto;
+}
+.lengthChange {
+  display: flex;
+  align-items: center;
+}
+.range {
+  width: 200px;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
 }
