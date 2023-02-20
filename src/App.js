@@ -82,6 +82,10 @@ function App() {
     setPassword(password);
   };
 
+  const copyPasswordtoClipboard = () => {
+    navigator.clipboard?.writeText && navigator.clipboard.writeText(password);
+  };
+
   return (
     <div className="App">
       <div className="box">
@@ -151,11 +155,21 @@ function App() {
               />
             </label>
           </div>
-          <input className="submitButton" type="submit" value="Generate" />
+          <input
+            className="button submitButton"
+            type="submit"
+            value="Generate"
+          />
         </form>
         <div className="password">
           {password ? password : <p>Generate your password!</p>}
         </div>
+        <button
+          className={`button copyButton ${password ? '' : 'hidden'}`}
+          onClick={copyPasswordtoClipboard}
+        >
+          Copy Password
+        </button>
       </div>
     </div>
   );

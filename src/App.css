@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 .box {
   display: flex;
@@ -37,10 +38,14 @@ label {
 input {
   margin-left: 10px;
 }
-.submitButton {
+.button {
   padding: 10px 20px;
   border-radius: 5px;
   border: 1px solid #555;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #bbb;
 }
 .password {
   text-align: center;
@@ -59,4 +64,28 @@ input {
 .checkbox {
   width: 20px;
   height: 20px;
+}
+.hidden {
+  visibility: hidden;
+}
+@media (width< 800px) {
+  .box {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: none;
+    overflow: hidden;
+  }
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (width < 600px) {
+  .lengthChange {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
